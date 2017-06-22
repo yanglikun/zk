@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gbk"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <bean id="curatorClient" class="com.example.zk.leader.util.CuratorFrameworkFactoryBean" lazy-init="false">
+        <property name="connectString" value="192.168.147.89:2181"/>
+        <property name="namespace" value="train"/>
+    </bean>
+</beans>
