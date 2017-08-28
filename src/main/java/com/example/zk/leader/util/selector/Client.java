@@ -25,6 +25,11 @@ public class Client {
         String leaderPath = "/leaderPath";
         LeaderSelector leaderSelector = new LeaderSelector(curatorClient, leaderPath, new
                 LeaderSelectorListenerAdapter() {
+                    /**
+                     * 这里面应该捕获异常，如果出现异常，应该放弃leader
+                     * @param client
+                     * @throws Exception
+                     */
                     @Override
                     public void takeLeadership(CuratorFramework client) throws Exception {
                         logger.debug(currentThread() + "获取leader");
