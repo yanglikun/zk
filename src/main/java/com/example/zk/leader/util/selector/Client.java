@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * http://curator.apache.org/curator-recipes/leader-election.html
  * Created by yanglikun on 2017/6/21.
  */
 public class Client {
